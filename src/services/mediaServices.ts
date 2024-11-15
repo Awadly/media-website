@@ -26,3 +26,11 @@ export const createMediaItem = async (mediaData: Partial<MediaProp>) => {
   const response = await axios.post(API_URL, mediaData);
   return response.data;
 };
+
+export const likeMediaItem = async (id: number): Promise<void> => {
+  await axios.post(`${API_URL}/${id}/like`);
+};
+
+export const unlikeMediaItem = async (id: number): Promise<void> => {
+  await axios.post(`${API_URL}/${id}/unlike`);
+};
