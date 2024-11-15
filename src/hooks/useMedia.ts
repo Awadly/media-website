@@ -36,7 +36,6 @@ export const useMedia = () => {
         )
       );
 
-      // Make the API request to like or unlike
       if (liked) {
         await unlikeMediaItem(id);
       } else {
@@ -44,7 +43,6 @@ export const useMedia = () => {
       }
     } catch (error) {
       console.error("Error updating like status:", error);
-      // Revert state if the request fails
       setMedia((prevMedia) =>
         prevMedia.map((item) =>
           item.id === id
