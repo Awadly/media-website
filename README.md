@@ -1,46 +1,64 @@
-# Getting Started with Create React App
+# Media Platform React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Media Platform built with React! This app allows users to interact with various media files, including uploading images, liking/unliking items, and toggling between dark and light modes. This project is hosted at https://awadly-media.netlify.app/
 
-## Available Scripts
+## Functionality
 
-In the project directory, you can run:
+### 1. Viewing Media
 
-### `npm start`
+- The app loads a list of media items (images or videos) from an API.
+- Each media item is displayed with its file (image/video) and the current like count.
+- Users can scroll through the list to view available media items.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 2. Liking and Unliking Media
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Each media item has a like button that allows users to like or unlike the media.
+- When a user likes an item, the like count increases by one, and the button icon switches to a "thumb-down" indicating the item is liked.
+- When a user unlikes the item, the like count decreases by one, and the button switches back to a "thumb-up" icon.
 
-### `npm test`
+### 3. Uploading Media
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Users can upload media files from their local device by selecting an image or video using the image picker feature.
+- The app then sends the file to a remote server, which processes the upload and returns a URL for the uploaded media.
+- Once the file is uploaded, the app updates the media list by adding the newly uploaded item, allowing users to view it in the app.
 
-### `npm run build`
+### 4. Dark Mode/Light Mode Toggle
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- The app allows users to switch between dark mode and light mode for a more personalized experience.
+- A toggle button in the top right corner of the app enables users to change the theme at any time.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This project was bootstrapped with Create React App. To get started, follow the instructions below.
 
-### `npm run eject`
+### Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Make sure you have the following installed:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Node.js (version >= 14)
+- npm (comes with Node.js)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Installing Dependencies
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. Clone this repository:
 
-## Learn More
+   ```bash
+   git clone https://github.com/Awadly/media-website
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Navigate into the project folder:
+   ```bash
+   cd media-website
+   ```
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Running the App
+
+Once dependencies are installed, you can run the app in development mode by executing the following command:
+
+```bash
+npm start
+```
